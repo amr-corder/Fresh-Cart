@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import logo1 from "../../app/logo1.jpg"
+
 import { Poppins } from "next/font/google"
 import {
     NavigationMenu,
@@ -56,7 +56,7 @@ export default async function Navbar() {
                     <Link href="/" className="group">
                         <div className="flex items-center gap-3 shrink-0">
                             <div >
-                                <Image src={logo1} alt="Logo" width={46} height={46}  />
+                                <Image src="/images/logo1.jpg" alt="Logo" width={46} height={46}  />
                             </div>
                             <span
                                 className={[
