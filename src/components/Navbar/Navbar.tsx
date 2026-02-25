@@ -8,7 +8,7 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
 } from "@/components/ui/navigation-menu"
-// import dynamic from "next/dynamic";
+
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -26,7 +26,7 @@ import { CartRes } from "@/app/Interfaces/CartInterfaces"
 import NavbarClientParts from "./NavbarClientsParts"
 const poppins = Poppins({ weight: "700", subsets: ["latin"] })
 
-// const CartIcon = dynamic(() => import("../CartIcon/CartIcon"), { ssr: false });
+
 export default async function Navbar() {
     const session = await getServerSession(authOptions)
     let data: CartRes | null = null
@@ -49,10 +49,10 @@ export default async function Navbar() {
             <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-white/6 to-transparent" />
             <div className="container mx-auto flex items-center justify-between px-4 py-3">
                 <div className="flex items-center gap-3">
-                    {/* Burger on mobile */}
+                    
                     <NavbarClientParts />
 
-                    {/* Logo */}
+                   
                     <Link href="/" className="group">
                         <div className="flex items-center gap-3 shrink-0">
                             <div >

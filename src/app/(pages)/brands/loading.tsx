@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo1 from "../../logo1.jpg"
+import logo1 from "../../app/logo1.jpg"
 
 export default function Loading() {
     return (
