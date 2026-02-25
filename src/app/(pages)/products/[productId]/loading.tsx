@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../../favicon.ico"
+
 
 export default function Loading() {
     return (
@@ -9,7 +9,7 @@ export default function Loading() {
                 <div className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-blue-500/10 blur-3xl" />
                 <div className="relative flex items-center justify-center mb-6 gap-3">
                     <Image
-                        src={logo}
+                        src="/images/logo1.jpg"
                         alt="Logo"
                         width={40}
                         height={40}
