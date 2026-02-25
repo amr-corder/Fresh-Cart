@@ -5,10 +5,17 @@ import { authOptions } from "@/auth";
 import ProductCard from "@/components/ProductCard/ProductCard";
 
 export default async function Products() {
+  console.log('API_URL:', process.env.API_URL);
+  console.log('BASE_URL:', process.env.BASE_URL);
+  console.log('NEXT_AUTH_API_URL:', process.env.NEXT_AUTH_API_URL);
+
+  if (!process.env.API_URL) {
+    throw new Error('API_URL is not defined. Check your environment variables!');
+  }
   const response = await fetch(`${process.env.API_URL}/products`);
   const data: ProductsResponse = await response.json();
 const session = await getServerSession(authOptions);
-
+ 
   return (
   <div className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50">
 
